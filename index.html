@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fast food</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        background-color: bisque;
+        padding-inline: 50px;
+        justify-content: space-between;
+        padding-top: 2%;
+        overflow-x: hidden;
+      }
+
+      .list {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        margin-top: 10px;
+      }
+
+      .nav {
+        width: 100%;
+        height: 40%;
+        background-color: peru;
+        list-style: decimal;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: space-between;
+      }
+      #ourservice {
+        width: 100vw;
+        height: 5vh;
+        margin-top: 10px;
+      }
+      #favorite {
+        width: 100vw;
+        height: 5vh;
+        margin-top: 10px;
+      }
+      #fullorder {
+        width: 100vw;
+        height: 5vh;
+        margin-top: 10px;
+      }
+      #contact {
+        width: 100vw;
+        height: 5vh;
+        margin-top: 20px;
+      }
+      #hamburgerMenu {
+        display: none;
+      }
+      .div {
+        width: 300px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(253, 182, 83, 0.96);
+        margin-top: 10%;
+        margin-right: 570px;
+        justify-content: center;
+        text-align: center;
+      }
+      button {
+        height: 20%;
+        width: 50%;
+        margin-right: 25%;
+        font-size: large;
+        transition: 2s;
+        box-shadow: -10px 10px 20px 10px rgb(92, 76, 55);
+      }
+      button:hover {
+        cursor: pointer;
+        font-size: small;
+        background-color: rgba(181, 179, 179, 0.944);
+      }
+      .circle-container {
+        display: flex;
+        width: 100vw;
+      }
+      section {
+        width: 60px;
+        height: 60px;
+        margin-top: 20px;
+        border-radius: 50%;
+        background-color: rgba(248, 95, 68, 0.852);
+        position: relative;
+        animation-name: mymove;
+        animation-duration: 7s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+      @keyframes mymove {
+        0% {
+          transform: translateX(0px);
+          background-color: firebrick;
+        }
+        100% {
+          transform: translateX(-1500px);
+          background-color: khaki;
+        }
+      }
+      @media (max-width: 600px) {
+        #logo {
+          display: none;
+        }
+        .list {
+          display: none;
+        }
+        #hamburgerMenu {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <img
+          id="hamburgerMenu"
+          src="/src/svg/menu-icon.svg"
+          alt="hamburgerMenu"
+          width="50px"
+          height="50px"
+        />
+        <ul class="list">
+          <li>خدمات ما <a href="#ourservice"></a></li>
+          <li>دسته ی غذاهای محبوب<a href="#favorite"></a></li>
+          <li>پرسفارش ها<a href="#fullorder"></a></li>
+          <li>ارتباط با پشتیبانی<a href="#contact"></a></li>
+        </ul>
+        <img
+          id="logo"
+          src="/src/svg/burger.svg"
+          alt="burger"
+          width="100"
+          height="100"
+        />
+      </nav>
+    </header>
+    <div class="div">
+      <h1>برای سفارش غذا کلیک کنید</h1>
+      <button>بزن روش</button>
+    </div>
+    <div class="circle-container">
+      <section></section>
+    </div>
+  </body>
+</html>
